@@ -3,13 +3,13 @@ title: Laboratoire 1
 description: Introduction à GNU Radio
 ---
 
-# Laboratoire 1
-## Objectifs
+# 🧪 Laboratoire 1
+## 🎯 Objectifs
 - Se familiariser avec le traitement numérique du signal
 - Se familiariser avec l’environnement GNU Radio
 - Se familiariser avec le spectre de signaux numérique
 
-## Partie 1 – Introduction à l’interface GNU Radio
+## 📻 Partie 1 – Introduction à l’interface GNU Radio
 1. Démarrer GNU Radio en cliquant son icône dans la barre de raccourci
 2. Créer un nouveau schéma en cliquant l’icône correspondant ou en cliquant File --> New --> QT GUI
 3. En créant un nouveau schéma, GNU Radio crée un schéma contenant 2 blocs, ***Options*** et un bloc ***Variable*** (voir capture plus bas). Le bloc ***Options*** permet de donner un nom au schéma, identifier l’auteur, etc. Le bloc ***Variable*** est un bloc que nous pouvons utiliser aussi souvent que voulu afin de contenir des variables qui pourront être utilisées comme paramètres dans d’autres blocs. Dans ce cas-ci, GNU Radio nous a créé une variable samp_rate, puisque nous risquons d’utiliser une fréquence d’échantillonnage unique dans nos autres blocs. Nous verrons plus loin.
@@ -34,7 +34,7 @@ GNU Radio Companion, que nous utilisons, est un éditeur graphique d’une libra
 En sélectionnant un bloc et en appuyant sur la touche de flèche vers le haut/bas du clavier, on peut changer rapidement le type des entrées/sorties des blocs.
 :::
 
-:::info Question 1
+:::info ❓ Question 1
 Pourquoi le graphique temporel comprenait 2 signaux lorsque le type des signaux était *Complex*, alors qu’il n’y en a qu’un lorsque le type est *Float*?
 :::
 
@@ -42,7 +42,7 @@ Pourquoi le graphique temporel comprenait 2 signaux lorsque le type des signaux 
 
 10. Exécuter le schéma et observer les différences avec les graphiques précédents.
 
-:::info Question 2
+:::info ❓ Question 2
 Quel est l’impact de changer la fréquence d’échantillonnage du bloc?
 :::
 
@@ -61,24 +61,24 @@ Quel est l’impact de changer la fréquence d’échantillonnage du bloc?
 13. Exécuter le schéma et observer le spectre.
 14. Augmenter graduellement jusqu’à ce que la raie spectrale semble rebondir. 
 
-:::info Question 3
+:::info ❓ Question 3
 Comment se nomme le phénomène que vous observez?
 :::
 
-## Partie 2 – Contenu spectral de séquences définies
+## 📻 Partie 2 – Contenu spectral de séquences définies
 1. Créer un nouveau schéma
 2. Créer votre propre schéma permettant d’observer le signal temporel et le spectre d’une série de 1,0,1,0,1,0, etc. transmise à 10kbps. Nous utiliserons un taux d’échantillonnage de 100kHz. Vous aurez besoin des blocs ***Vector Source*** pour définir la séquence binaire et ***Repeat*** pour maintenir la valeur de chaque bit pendant toute la période d’un bit. Le schéma résultant devrait ressembler au schéma suivant :
 
 ![Schéma de la séquence 10](./extern/lab1.2.png "Schéma de la séquence 10")
 
-:::info Question 4
+:::info ❓ Question 4
 Comment avez-vous calculé la valeur du paramètre Interpolation?
 :::
 
 3. Exécuter le programme et valider la durée d’un bit. Corriger le calcul du paramètre Interpolation si nécessaire. Pour aider à utiliser le ***GUI Time Sink*** comme un oscilloscope, il est possible d’activer le *Control Panel* dans l’onglet *Config* du bloc.
 4. Une fois la séquence binaire correctement générée, remplir le tableau pour la séquence 10 :
 
-### Composantes spectrales de la séquence 10
+### 📋 Composantes spectrales de la séquence 10
 |Composante|Fréquence|Amplitude ou X|
 |:---:|:---:|:---:|
 |C<sub>1</sub>|          |          |
@@ -93,7 +93,7 @@ Comment avez-vous calculé la valeur du paramètre Interpolation?
 
 5. Changer la séquence pour 1,0,0 et identifier les composantes spectrales présentes ou non :
 
-### Composantes spectrales de la séquence 100
+### 📋 Composantes spectrales de la séquence 100
 |Composante|Fréquence|Oui/Non?|
 |:---:|:---:|:---:|
 |C<sub>1</sub>|          |          |
@@ -108,7 +108,7 @@ Comment avez-vous calculé la valeur du paramètre Interpolation?
 
 6. Changer la séquence pour 1,0,0,0,1 et identifier les composantes spectrales présentes ou non :
 
-### Composantes spectrales de la séquence 10001
+### 📋 Composantes spectrales de la séquence 10001
 |Composante|Fréquence|Oui/Non?|
 |:---:|:---:|:---:|
 |C<sub>1</sub>|          |          |
@@ -121,15 +121,15 @@ Comment avez-vous calculé la valeur du paramètre Interpolation?
 |C<sub>8</sub>|          |          |
 |C<sub>9</sub>|          |          |
 
-:::info Question 5
+:::info ❓ Question 5
 À partir des spectres précédents, quel lien peut-on établir entre la fréquence binaire, le fréquence des symboles (Baudrate) et le contenu spectral du signal?
 :::
 
-## Partie 3 – Contenu spectral de séquences aléatoires
+## 📻 Partie 3 – Contenu spectral de séquences aléatoires
 Les séquences que nous avons obtenues dans la partie précédente sont considérées comme pseudo-aléatoires. Il est possible de générer de telles séquences de n’importe quelle longueur. Plus la longueur est élevée, plus on se rapproche de séquences purement aléatoires, séquences que nous générerons dans cette partie.
 
 1. Remplacer le ***Vector Source*** par un bloc ***Random Uniform Source*** ayant les paramètres suivants :
-### Paramètres du bloc Random Uniform Source
+### 📋 Paramètres du bloc Random Uniform Source
 |Paramètre|Valeur|
 |:---:|:---:|
 |Output Type|int|
@@ -138,8 +138,8 @@ Les séquences que nous avons obtenues dans la partie précédente sont considé
 |Seed|0|
 
 3. Supprimer le ***QT GUI Time Sink*** et changer la variable *bitrate* par un ***QT GUI Range***. Activer l’option *Config* --> *Control Panel* du bloc ***QT GUI Frequency Sink***.
-23)	Exécuter le schéma. Changer la valeur du *bitrate* et observer l’effet sur le spectre. Si le spectre n’est pas stable, augmenter le nombre de moyennage en glissant l’option *Avg* du *Control Panel* activé à l’étape précédente.
+4. Exécuter le schéma. Changer la valeur du *bitrate* et observer l’effet sur le spectre. Si le spectre n’est pas stable, augmenter le nombre de moyennage en glissant l’option *Avg* du *Control Panel* activé à l’étape précédente.
 
-:::info Question 6
+:::info ❓ Question 6
 Quel lien pouvons-nous établir entre le débit binaire et la bande passante du signal?
 :::
