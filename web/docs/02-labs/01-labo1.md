@@ -34,7 +34,7 @@ GNU Radio Companion, que nous utilisons, est un éditeur graphique d’une libra
 En sélectionnant un bloc et en appuyant sur la touche de flèche vers le haut/bas du clavier, on peut changer rapidement le type des entrées/sorties des blocs.
 :::
 
-:::info ? Question 1
+:::info Question 1
 Pourquoi le graphique temporel comprenait 2 signaux lorsque le type des signaux était *Complex*, alors qu’il n’y en a qu’un lorsque le type est *Float*?
 :::
 
@@ -42,7 +42,7 @@ Pourquoi le graphique temporel comprenait 2 signaux lorsque le type des signaux 
 
 10. Exécuter le schéma et observer les différences avec les graphiques précédents.
 
-:::info ? Question 2
+:::info Question 2
 Quel est l’impact de changer la fréquence d’échantillonnage du bloc?
 :::
 
@@ -61,7 +61,7 @@ Quel est l’impact de changer la fréquence d’échantillonnage du bloc?
 13. Exécuter le schéma et observer le spectre.
 14. Augmenter graduellement jusqu’à ce que la raie spectrale semble rebondir. 
 
-:::info ? Question 3
+:::info Question 3
 Comment se nomme le phénomène que vous observez?
 :::
 
@@ -71,7 +71,7 @@ Comment se nomme le phénomène que vous observez?
 
 ![Schéma de la séquence 10](./extern/lab1.2.png "Schéma de la séquence 10")
 
-:::info ? Question 4
+:::info Question 4
 Comment avez-vous calculé la valeur du paramètre Interpolation?
 :::
 
@@ -121,7 +121,7 @@ Comment avez-vous calculé la valeur du paramètre Interpolation?
 |C<sub>8</sub>|          |          |
 |C<sub>9</sub>|          |          |
 
-:::info ? Question 5
+:::info Question 5
 À partir des spectres précédents, quel lien peut-on établir entre la fréquence binaire, le fréquence des symboles (Baudrate) et le contenu spectral du signal?
 :::
 
@@ -140,6 +140,6 @@ Les séquences que nous avons obtenues dans la partie précédente sont considé
 3. Supprimer le ***QT GUI Time Sink*** et changer la variable *bitrate* par un ***QT GUI Range***. Activer l’option *Config* --> *Control Panel* du bloc ***QT GUI Frequency Sink***.
 23)	Exécuter le schéma. Changer la valeur du *bitrate* et observer l’effet sur le spectre. Si le spectre n’est pas stable, augmenter le nombre de moyennage en glissant l’option *Avg* du *Control Panel* activé à l’étape précédente.
 
-:::info ? Question 6
+:::info Question 6
 Quel lien pouvons-nous établir entre le débit binaire et la bande passante du signal?
 :::
