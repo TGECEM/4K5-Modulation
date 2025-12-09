@@ -42,5 +42,6 @@ Il existe plusieurs logiciels pour radio-amateurs permettant d’intégrer plusi
 L’interface logicielle que nous utiliserons dans le cadre de ce cours est GNUradio companion (voir https://www.gnuradio.org/ ou le code source  sur https://github.com/gnuradio/gnuradio).
 
 ![Capture d'écran GNUradio](./extern/gnuradio.png "Interface graphique GNUradio companion")
+
 GNUradio est une librairie python permettant de faire le traitement numérique des échantillons d’un SDR. Au laboratoire, nous avons installé la suite radioconda qui fournit une installation python fonctionnelle comprenant GNU radio et plusieurs autres librairies utiles.
 Dans GNUradio companion, chaque compilation d’un schéma-bloc *.grc (traduction libre de flowchart) génère un script python du même nom *.py et c’est ce script qui est exécuté lorsqu’on clique sur le bouton démarrer. Lorsque l’exécution d’un script retourne une erreur, on peut utiliser la fenêtre de dialogue dans le bas de l’écran pour lire le message d’erreur. En plus des blocs fournis à droite de l’interface graphique, il est possible de programmer ses propres blocs.
