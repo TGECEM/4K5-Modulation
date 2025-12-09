@@ -30,6 +30,7 @@ const sidebars = {
         tooltip: "visible"
       }
     }
+]
 };
 
 module.exports = sidebars;
