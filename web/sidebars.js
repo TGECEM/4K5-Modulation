@@ -19,7 +19,7 @@ const sidebars = {
     {
       type: "doc",
       label: "Labo 1",
-      id: "labos/labo1",
+      id: "tp/tp1",
       customProps: {
         calendrier: {
           "Antoine": [
