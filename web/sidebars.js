@@ -15,8 +15,11 @@ const sidebars = {
         },
         tooltip: "visible" // Valeurs possibles visible ou cache, valeur par défaut "visible"
       }
-    },
-    {
+    }
+    
+  ],
+  "Laboratoires": [
+  {
       type: "doc",
       label: "Labo 1",
       id: "cours/labo1",
