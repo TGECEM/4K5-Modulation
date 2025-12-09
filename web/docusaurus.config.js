@@ -74,13 +74,7 @@ const config = {
             docId: "cours/cours1",
             position: "left",
             label: "Cours",
-          },
-          {
-            type: "docSidebar",
-            position: "left",
-            sidebarId: "labs",
-            label: "Laboratoires",
-          },
+          }
         ],
       },
       footer: {
