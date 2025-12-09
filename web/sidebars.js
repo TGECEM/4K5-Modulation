@@ -2,7 +2,7 @@
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
-  docs: [h
+  docs: [
     {
       type: "doc",
       label: "Cours 1",
