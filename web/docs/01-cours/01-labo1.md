@@ -14,18 +14,18 @@ description: Introduction à GNU Radio
 2. Créer un nouveau schéma en cliquant l’icône correspondant ou en cliquant File --> New --> QT GUI
 3. En créant un nouveau schéma, GNU Radio crée un schéma contenant 2 blocs, ***Options*** et un bloc ***Variable*** (voir capture plus bas). Le bloc ***Options*** permet de donner un nom au schéma, identifier l’auteur, etc. Le bloc ***Variable*** est un bloc que nous pouvons utiliser aussi souvent que voulu afin de contenir des variables qui pourront être utilisées comme paramètres dans d’autres blocs. Dans ce cas-ci, GNU Radio nous a créé une variable samp_rate, puisque nous risquons d’utiliser une fréquence d’échantillonnage unique dans nos autres blocs. Nous verrons plus loin.
 
-![Schéma de départ GNUradio](./extern/GNUradio_new.png "Schéma de départ de GNU Radio")
+![Schéma de départ GNUradio](./_01-labo1/GNUradio_new.png "Schéma de départ de GNU Radio")
 
 4. Ajouter un bloc ***Signal Source*** soi en recherchant avec l’icône  ou en sélectionnant dans l’arborescence de droite Core --> Waveform Generators --> Signal Source. On peut ajouter le bloc en double-cliquant sur le nom ou en faisant un glisser-déposer (drag and drop) dans le schéma. 
 5. Ajouter un bloc ***Throttle*** et connecter la sortie du Signal Source à l’entrée du bloc ***Throttle***. On peut connecter 2 blocs soi en cliquant une fois sur les ports connectés ou en cliquant sur un port puis en gardant le bouton gauche enfoncé, on glisse jusqu’au 2e port.
 6. Connecter la sortie du bloc ***Throttle*** sur un bloc ***QT GUI Time Sink*** et un bloc ***QT GUI Frequency Sink***. Le schéma devrait être identique à celui-ci :
 
-![Schéma de la Partie 1](./extern/lab1.1.png "Schéma de la Partie 1")
+![Schéma de la Partie 1](./_01-labo1/lab1.1.png "Schéma de la Partie 1")
 
 7. Exécuter le code en cliquant sur le bouton *Play*. Si vous n’aviez pas encore sauvegardé votre schéma, on vous demandera de sélectionner un emplacement et un nom. Une fois le schéma sauvegardé, une fenêtre de graphique apparaîtra. Maximiser la fenêtre si nécessaire afin de bien voir les 2 graphiques. Le premier indique l’amplitude en fonction du temps, un peu comme le ferait un oscilloscope et le 2e l’amplitude en fonction de la fréquence un peu comme le ferait un analyseur de spectre.
 
 :::tip NOTE
-GNU Radio Companion, que nous utilisons, est un éditeur graphique d’une librairie python, GNU Radio. Lorsqu’on sauvegarde le schéma, le programme sauvegarde également du code python (*.py) qui sera exécuté lorsqu’on clique sur le bouton *Play*. La barre en haut ![Barre gnuradio](./extern/gnuradio_bar.png) nous permet de contrôler le code. Le premier icône nous permet de lire les messages d’erreur si le code ne peut pas être exécuté, le 2e icône permet de compiler le code sans l’exécuter. Le 3e permet de compiler et exécuter le code et le 4e permet d’arrêter l’exécution une fois celle-ci démarrée.
+GNU Radio Companion, que nous utilisons, est un éditeur graphique d’une librairie python, GNU Radio. Lorsqu’on sauvegarde le schéma, le programme sauvegarde également du code python (*.py) qui sera exécuté lorsqu’on clique sur le bouton *Play*. La barre en haut ![Barre gnuradio](./_01-labo1/gnuradio_bar.png) nous permet de contrôler le code. Le premier icône nous permet de lire les messages d’erreur si le code ne peut pas être exécuté, le 2e icône permet de compiler le code sans l’exécuter. Le 3e permet de compiler et exécuter le code et le 4e permet d’arrêter l’exécution une fois celle-ci démarrée.
 :::
 
 8. Changer le type d’entrée/sortie de tous les blocs pour *float* et observer la différence avec les graphiques précédents. 
@@ -69,7 +69,7 @@ Comment se nomme le phénomène que vous observez?
 1. Créer un nouveau schéma
 2. Créer votre propre schéma permettant d’observer le signal temporel et le spectre d’une série de 1,0,1,0,1,0, etc. transmise à 10kbps. Nous utiliserons un taux d’échantillonnage de 100kHz. Vous aurez besoin des blocs ***Vector Source*** pour définir la séquence binaire et ***Repeat*** pour maintenir la valeur de chaque bit pendant toute la période d’un bit. Le schéma résultant devrait ressembler au schéma suivant :
 
-![Schéma de la séquence 10](./extern/lab1.2.png "Schéma de la séquence 10")
+![Schéma de la séquence 10](./_01-labo1/lab1.2.png "Schéma de la séquence 10")
 
 :::info ❓ Question 4
 Comment avez-vous calculé la valeur du paramètre Interpolation?
